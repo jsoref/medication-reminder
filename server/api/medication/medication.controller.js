@@ -17,7 +17,7 @@ exports.index = function (req, res) {
     q(Medication.find(query).sort({'d.c': -1}).exec()).then(function (meds) {
         res.json(meds);
     }).catch(function (err) {
-        console.error('Error occured listing medications', err);
+        console.error('Error occurred listing medications', err);
         res.send(500);
     });
 };
@@ -30,7 +30,7 @@ exports.show = function (req, res) {
             res.send(404);
         }
     }).catch(function (err) {
-        console.error('Error occured getting medication', err);
+        console.error('Error occurred getting medication', err);
         res.send(500);
     });
 };
@@ -42,7 +42,7 @@ exports.create = function (req, res) {
     q(Medication.create(req.body)).then(function (med) {
         res.json(201, med);
     }).catch(function (err) {
-        console.error('Error occured creating medication', err);
+        console.error('Error occurred creating medication', err);
         res.send(500);
     });
 };
@@ -58,7 +58,7 @@ exports.update = function (req, res) {
             }
         });
     }).catch(function (err) {
-        console.error('Error occured updating medication', err);
+        console.error('Error occurred updating medication', err);
         res.send(500);
     });
 };
@@ -71,7 +71,7 @@ exports.destroy = function (req, res) {
             res.send(204);
         }
     }).catch(function (err) {
-        console.error('Error occured deleting medication', err);
+        console.error('Error occurred deleting medication', err);
         res.send(500);
     });
 };
