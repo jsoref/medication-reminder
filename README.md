@@ -14,7 +14,7 @@ At medication time there will be a chime sound and visual indication of which me
 All missed medications will be displayed in a separate area of the screen.
 
 ### Technology Stack
-* MongodDB
+* MongoDB
 * Node.js
 * Mongoose
 * Express
